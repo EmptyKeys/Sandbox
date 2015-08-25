@@ -1,0 +1,51 @@
+!SceneAsset
+Id: fdc7146f-e94a-4614-b026-b5ae560864e9
+SerializedVersion: 6
+Tags: []
+Hierarchy:
+    RootEntity: f1b442d9-9138-4335-8740-14cb9b758ba4
+    Entities:
+        - !Scene
+            Name: Scene
+            Components:
+                SceneComponent.Key:
+                    GraphicsCompositor: !SceneGraphicsCompositorLayers
+                        Cameras: []
+                        Layers: []
+                        Master:
+                            Name: SceneGraphicsLayer
+                            Output: !MasterRenderFrameProvider {}
+                            Renderers:
+                                - !SceneChildRenderer
+                                    ChildScene:
+                                        Entity: {Id: feb95f66-d070-4025-a12e-48649ba1504f}
+                                        Component: ChildSceneComponent.Key
+                                    Output: !CurrentRenderFrameProvider {}
+                    EditorSettings:
+                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                        SceneUnit: 1
+                        Camera: {}
+                        Mode: !SceneEditorGraphicsModeLDRSettings
+                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children:
+                        -   Entity: {Id: feb95f66-d070-4025-a12e-48649ba1504f}
+                            Component: TransformComponent.Key
+            Id: f1b442d9-9138-4335-8740-14cb9b758ba4
+        -   Name: Entity
+            Components:
+                ChildSceneComponent.Key:
+                    Scene: null
+                ScriptComponent.Key:
+                    Scripts:
+                        - !MyGame.SceneTest,MyGame.Game
+                            Id: 2df4eac5-9cfe-477e-b00c-7419102716e6
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: feb95f66-d070-4025-a12e-48649ba1504f

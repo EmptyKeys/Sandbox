@@ -1,0 +1,52 @@
+!Package
+Id: 3525abf6-4ad9-44eb-bba3-f39866a0b231
+Tags: []
+Meta:
+    Name: MyGame
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: MyGame
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.2.2-beta
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: MyGame.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_11_0
+            GameSettingsAsset.DefaultScene: fdc7146f-e94a-4614-b026-b5ae560864e9:RootScene
+            Paradox.DisplayOrientation: LandscapeRight
+        ProjectReferences:
+            -   Id: cb6982cc-c985-4c14-8be0-961f47971ed8
+                Location: MyGame.Game/MyGame.Game.csproj
+                Type: Library            
+            -   Id: CC235793-54DE-4ED6-9A2C-0CF2521CDF93
+                Location: ../TestLib/TestLib.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: Direct3D11
+        ProjectReferences:
+            -   Id: 496196d8-2085-47b0-94b4-29f2b89c84d6
+                Location: MyGame.Windows/MyGame.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
