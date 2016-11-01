@@ -96,10 +96,8 @@
     <Content Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
-    <MonoGameContentReference Include="Content\Content.mgcb" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
+    <None Include="Content\Segoe_UI_15_Bold.xnb" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
