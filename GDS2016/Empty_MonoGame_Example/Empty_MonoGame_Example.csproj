@@ -96,7 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Content\Segoe_UI_15_Bold.xnb" />
+    <Content Include="Content\Segoe_UI_15_Bold.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>

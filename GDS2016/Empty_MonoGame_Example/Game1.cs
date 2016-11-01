@@ -40,8 +40,8 @@ namespace Empty_MonoGame_Example
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 640;
             graphics.PreferMultiSampling = true;
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             graphics.SynchronizeWithVerticalRetrace = true;
